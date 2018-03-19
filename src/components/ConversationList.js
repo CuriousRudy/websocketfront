@@ -3,7 +3,7 @@ import { ActionCable } from 'react-actioncable-provider';
 import { API_ROOT } from '../constants';
 import NewConversationForm from './NewConversationForm';
 import MessagesArea from './MessagesArea';
-import Cable from './Cable';
+import Cable from '../Cable';
 
 class ConversationList extends React.Component {
   state = {
@@ -68,7 +68,7 @@ class ConversationList extends React.Component {
   }
 }
 
-export default ConversationsList;
+export default ConversationList;
 
 // helpers
 
