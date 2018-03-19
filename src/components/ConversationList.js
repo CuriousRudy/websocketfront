@@ -11,14 +11,14 @@ class ConversationList extends React.Component {
     activeConversation: null
   };
 
-  // componentDidMount = () => {
-  //   fetch(`${API_ROOT}/conversations`)
-  //     .then(res => res.json())
-  //     .then(conversations => this.setState({ conversations }));
-  // };
+  componentDidMount = () => {
+    fetch(`${API_ROOT}/conversations`)
+      .then(res => res.json())
+      .then(conversations => this.setState({ conversations }));
+  };
 
   handleClick = id => {
-    this.setState({ activeConverstation: id });
+    this.setState({ activeConversation: id });
   };
 
   handleReceivedConversation = response => {
@@ -39,6 +39,7 @@ class ConversationList extends React.Component {
   };
 
   render() {
+    console.log(this.state.conversations);
     const { conversations, activeConversation } = this.state;
     return (
       <div className="conversationsList">
