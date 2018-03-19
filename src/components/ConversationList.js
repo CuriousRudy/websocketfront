@@ -7,15 +7,15 @@ import Cable from '../Cable';
 
 class ConversationList extends React.Component {
   state = {
-    converstations: [],
-    activeConverstation: null
+    conversations: [],
+    activeConversation: null
   };
 
-  componentDidMount = () => {
-    fetch(`${API_ROOT}/conversations`)
-      .then(res => res.json())
-      .then(conversations => this.setState({ conversations }));
-  };
+  // componentDidMount = () => {
+  //   fetch(`${API_ROOT}/conversations`)
+  //     .then(res => res.json())
+  //     .then(conversations => this.setState({ conversations }));
+  // };
 
   handleClick = id => {
     this.setState({ activeConverstation: id });

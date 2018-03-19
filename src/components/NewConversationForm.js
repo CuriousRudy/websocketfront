@@ -7,9 +7,10 @@ class NewConversationForm extends React.Component {
   };
 
   updateForm = e => {
-    this.setState({
-      title: e.target.value
-    });
+    console.log(e);
+    // this.setState({
+    //   title: e.target.value
+    // });
   };
 
   handleSubmit = e => {
@@ -22,11 +23,16 @@ class NewConversationForm extends React.Component {
     this.setState({ title: '' });
   };
   render() {
+    console.log(this.state.title);
     return (
       <div>
-        <form action="">
+        <form onSubmit={this.handleSubmit}>
           <label>New Conversation:</label>
-          <input type="text" value={this.state.title} name="title" />
+          <input
+            type="text"
+            value={this.state.title}
+            onChange={this.updateForm}
+          />
           <input type="submit" />
         </form>
       </div>
